@@ -12,26 +12,26 @@
 <tw-storydata name="1The Haunting of Aldridge Manor" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="32B5502B-48D5-4D68-8A38-3544D1491F34" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* GENERAL STYLING */
 body {
   background-color: #222;
-  color: #eee; 
-  font-family: 'Crimson Text', serif; 
-  line-height: 1.6; 
+  color: #eee; /* Slightly lighter text color */
+  font-family: 'Crimson Text', serif; /* If this font isn't working, try a different serif font */
+  line-height: 1.6; /* A bit more line spacing */
   text-align: justify;
 }
 
 /* LINKS */
 tw-link { 
   color: #444; /* Dark gray */
-
+  /* ... your other link styles ... */
 }
 
 
 tw-link:hover {
   text-shadow: 
-    0 0 10px rgba(230, 18, 18, 1);
-    0 0 30px rgba(230, 18, 18);
-    0 0 50px rgba(230, 18, 18); 
+    0 0 10px rgba(230, 18, 18, 1), /* Inner glow - increase spread (10px) */
+    0 0 30px rgba(230, 18, 18), /* Medium glow - increase spread (30px) */
+    0 0 50px rgba(230, 18, 18); /* Outer glow - increase spread (50px) */
 }
-/*(Storu Text Containers)*/
+/* PASSAGES (Story Text Containers) */
 tw-story {
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,8 +40,8 @@ tw-story {
 }
 
 tw-passage {
-  background-color: rgba(25, 25, 25, 0.85); 
-  border: 3px solid #444; 
+  background-color: rgba(25, 25, 25, 0.85); /* Slightly more opaque background */
+  border: 3px solid #444; /* Lighter border */
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -50,15 +50,15 @@ tw-passage {
 
 /* HEADINGS */
 h1, h2, h3 {
-  font-family: 'Lora', serif; 
-  color: #eee; 
+  font-family: 'Lora', serif; /* Try a different serif font if needed */
+  color: #eee; /* Match text color */
   text-shadow: 2px 2px 3px #000;
   text-align: center;
 }
 
 /* IMAGES */
 img {
-  border: 3px solid #444; /* border */
+  border: 3px solid #444; /* Lighter border */
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   margin: 10px auto;
   display: block;
@@ -66,29 +66,30 @@ img {
 }
 /* LINK GLOW EFFECT */
 tw-link {
-  transition: text-shadow 0.3s ease; /* smooth transition */
+  /* ... your existing link styles ... */
+  transition: text-shadow 0.3s ease; /* Add a smooth transition */
 }
 
 tw-link:hover {
-  text-shadow: 0 0 10px #800000, 0 0 20px #800000; /* Red glow hover */
- color: #e0d5d5; /* lighter gray on hover */
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// apply hover glow effects
+  text-shadow: 0 0 10px #800000, 0 0 20px #800000; /* Red glow on hover */
+ color: #e0d5d5; /* Slightly lighter gray on hover */
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to apply hover glow effects
 function applyHoverGlows() {
   const links = document.querySelectorAll('tw-link');
 
   links.forEach(link => {
     link.addEventListener('mouseover', () => {
-     
+      // You can add a class for the glow effect here if needed
     });
 
     link.addEventListener('mouseout', () => {
-      
+      // And remove the class here
     });
   });
 }
 
-
-$(document).on('passageend', applyHoverGlows);</script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="425,25" size="100,100">THE HAUNTING OF ALDRIDGE MANOR
+// Call the function after each passage transition
+$(document).on('passageend', applyHoverGlows);</script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="425,25" size="100,100">THE HAUNTING OF ALRIDGE MANOR
 
 [[Start game]]
 [[Load game]]
@@ -96,8 +97,8 @@ $(document).on('passageend', applyHoverGlows);</script><tw-passagedata pid="1" n
 [[Credits]]
 [[Quit game]]</tw-passagedata><tw-passagedata pid="2" name="Start game" tags="" position="400,200" size="100,100">The coppery tang of (text-colour:red)[blood]  filled your mouth. Your vision swam as you stumbled through the darkened hallway, the musty air thick with the scent of decay and something else... something ancient and predatory. You had walked into a (text-colour:red)[nightmare], and the worst part was, you weren&#39;t sure you were going to make it out.
 
-[[CONTINUE|Chapter 1/EP1]]</tw-passagedata><tw-passagedata pid="3" name="Load game" tags="" position="550,200" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Options" tags="" position="225,200" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Credits" tags="" position="550,25" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Quit game" tags="" position="650,200" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Chapter 1/EP1" tags="" position="400,325" size="100,100">//Chapter I 
-Episoade I
+[[CONTINUE|Chapter 1/EP1]]</tw-passagedata><tw-passagedata pid="3" name="Load game" tags="" position="525,200" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Options" tags="" position="225,200" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Credits" tags="" position="550,25" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Quit game" tags="" position="650,200" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Chapter 1/EP1" tags="" position="400,325" size="100,100">//Chapter I 
+Episode I
 THE SUMMONING//
 
 
@@ -119,9 +120,9 @@ You picked up the receiver, the bakelite cold and damp against your ear.
 (text-colour:#1c7ed6)[&quot;Speaking&quot;]
 You growled, your voice rough with fatigue.
 A beat of silence, then a voice, thin and reedy, like dry leaves skittering across pavement, whispered on the other end. 
-&quot;Is this... the investigator?(text-colour:#f03e3e)[&quot;
-Is this... the investigator?
-The one they call... the Wolf?&quot;]
+(text-colour:#f03e3e)
+[Is this Varg the investigator?
+The one they call... the Wolf?]
 
 
 [[The Wolf?]]
@@ -139,14 +140,28 @@ The one they call... the Wolf?&quot;
 [[What do you want?]]
 [[Who&#39;s asking?]]
 </tw-passagedata><tw-passagedata pid="11" name="The Wolf?" tags="" position="275,575" size="100,100">&lt;==
-&quot;The Wolf? You got the wrong number, pal.&quot;
-A dry chuckle, humorless and chilling, crackled through the receiver. &quot;Oh, I don&#39;t think I do, Mr...&quot; The voice trailed off, as if waiting for you to fill in the blank. &quot;Let&#39;s just say... I&#39;ve heard whispers. Rumors of a man who walks between two worlds. A man who can sniff out the truth, no matter how deeply it&#39;s buried.&quot;
-The client continues, their tone a mix of amusement and veiled threat. They know more than they&#39;re letting on, but the reward is too tempting to ignore. They offer a name: Aldridge Manor. A place whispered to be not just haunted, but a breeding ground for something far worse. They dangle a carrot: information about the investigator&#39;s past, a chance to understand the curse they carry. The call ends with an address, a time, and a warning: &quot;Don&#39;t be late. And Mr...? Be careful who you trust. Especially yourself.&quot;</tw-passagedata><tw-passagedata pid="12" name="Who&#39;s asking?" tags="" position="400,575" size="100,100"> &quot;Who&#39;s asking?&quot;
-A long, drawn-out sigh, heavy with resignation, came from the other end. &quot;A desperate woman, Mr.... &quot; Again, the pause, the subtle pressure. &quot;A woman who has lost everything to the shadows that cling to that accursed place.&quot;
-The client speaks of a family legacy, a darkness that has haunted her bloodline for generations. She mentions Aldridge Manor, her voice cracking with a mixture of fear and defiance. She&#39;s willing to pay handsomely, but more importantly, she offers something else: a chance to fight back against the very forces that torment the investigator. She ends the call with an address, a time, and a plea: &quot;Please, Mr.... You&#39;re my last hope.&quot;</tw-passagedata><tw-passagedata pid="13" name="What do you want?" tags="" position="525,575" size="100,100">&quot;What do you want?&quot;
-A moment of stunned silence, then a gasp, as if the voice on the other end had been holding its breath. &quot;Forgive me,&quot; she whispered, her tone suddenly small and afraid. &quot;I... I was told you could help. That you weren&#39;t afraid of the darkness.&quot;
+(text-colour:#1c7ed6)[The Wolf? You got the wrong number, pal.]
+A dry chuckle, humorless and chilling, crackled through the receiver.
+ (text-colour:#f03e3e)[Oh, I don&#39;t think I do, Mr Varg] 
+The voice trailed off, as if waiting for you to fill in the blank. 
+(text-colour:#f03e3e)[Let&#39;s just say... I&#39;ve heard whispers. Rumors of a man who walks between two worlds. A man who can sniff out the truth, no matter how deeply it&#39;s buried.]
+The client continues, their tone a mix of amusement and veiled threat. They know more than they&#39;re letting on, but the reward is too tempting to ignore. They offer a name: Alridge Manor. A place whispered to be not just haunted, but a breeding ground for something far worse.
+ They dangle a carrot: information about the investigator&#39;s past, a chance to understand the curse they carry.
+ The call ends with an address, a time, and a warning:
+(text-colour:#f03e3e) [Don&#39;t be late. And Mr Zarg? Be careful who you trust.
+ Especially yourself.]</tw-passagedata><tw-passagedata pid="12" name="Who&#39;s asking?" tags="" position="400,575" size="100,100">(text-colour:#1c7ed6) [Who&#39;s asking?]
+A long, drawn-out sigh, heavy with resignation, came from the other end.
+(text-colour:#f03e3e) [A desperate woman, Mr Varg.] Again, the pause, the subtle pressure.
+ A woman who has lost everything to the shadows that cling to that accursed place.
+The client speaks of a family legacy, a darkness that has haunted her bloodline for generations. She mentions Alridge Manor, her voice cracking with a mixture of fear and defiance. She&#39;s willing to pay handsomely, but more importantly, she offers something else: a chance to fight back against the very forces that torment the investigator. She ends the call with an address, a time, and a plea:
+(text-colour:#f03e3e) [Please, Mr Varg You&#39;re my last hope.]</tw-passagedata><tw-passagedata pid="13" name="What do you want?" tags="" position="525,575" size="100,100">(text-colour:#1c7ed6)[What do you want?]
+A moment of stunned silence, then a gasp, as if the voice on the other end had been holding its breath.
+ (text-colour:#f03e3e)[Forgive me, she whispered, her tone suddenly small and afraid.
+ I... I was told you could help.
+ That you weren&#39;t afraid of the darkness.]
 
-The client, clearly shaken but resolute, regains her composure. She speaks of a family heirloom, stolen from Aldridge Manor, a place where the veil between worlds is thin. She fears it&#39;s fallen into the wrong hands, hands that could unleash something terrible upon the world. She offers a hefty sum, but more importantly, she promises something more: a challenge worthy of the &quot;Wolf,&quot; a chance to embrace the beast within and face a true predator. The call ends with an address, a time, and a whispered warning: &quot;Control your hunger, Mr.... Some things are best left undisturbed.&quot;</tw-passagedata></tw-storydata>
+The client, clearly shaken but resolute, regains her composure. She speaks of a family heirloom, stolen from Alridge Manor, a place where the veil between worlds is thin. She fears it&#39;s fallen into the wrong hands, hands that could unleash something terrible upon the world. She offers a hefty sum, but more importantly, she promises something more: a challenge worthy of the &quot;Wolf,&quot; a chance to embrace the beast within and face a true predator. The call ends with an address, a time, and a whispered warning:
+(text-colour:#f03e3e) [Control your hunger, Mr Varg Some things are best left undisturbed.]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
