@@ -12,26 +12,26 @@
 <tw-storydata name="1The Haunting of Aldridge Manor" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="32B5502B-48D5-4D68-8A38-3544D1491F34" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* GENERAL STYLING */
 body {
   background-color: #222;
-  color: #eee; /* Slightly lighter text color */
-  font-family: 'Crimson Text', serif; /* If this font isn't working, try a different serif font */
-  line-height: 1.6; /* A bit more line spacing */
+  color: #eee; 
+  font-family: 'Crimson Text', serif; 
+  line-height: 1.6; 
   text-align: justify;
 }
 
 /* LINKS */
 tw-link { 
   color: #444; /* Dark gray */
-  /* ... your other link styles ... */
+
 }
 
 
 tw-link:hover {
   text-shadow: 
-    0 0 10px rgba(230, 18, 18, 1), /* Inner glow - increase spread (10px) */
-    0 0 30px rgba(230, 18, 18), /* Medium glow - increase spread (30px) */
-    0 0 50px rgba(230, 18, 18); /* Outer glow - increase spread (50px) */
+    0 0 10px rgba(230, 18, 18, 1);
+    0 0 30px rgba(230, 18, 18);
+    0 0 50px rgba(230, 18, 18); 
 }
-/* PASSAGES (Story Text Containers) */
+/*(Storu Text Containers)*/
 tw-story {
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,8 +40,8 @@ tw-story {
 }
 
 tw-passage {
-  background-color: rgba(25, 25, 25, 0.85); /* Slightly more opaque background */
-  border: 3px solid #444; /* Lighter border */
+  background-color: rgba(25, 25, 25, 0.85); 
+  border: 3px solid #444; 
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -50,15 +50,15 @@ tw-passage {
 
 /* HEADINGS */
 h1, h2, h3 {
-  font-family: 'Lora', serif; /* Try a different serif font if needed */
-  color: #eee; /* Match text color */
+  font-family: 'Lora', serif; 
+  color: #eee; 
   text-shadow: 2px 2px 3px #000;
   text-align: center;
 }
 
 /* IMAGES */
 img {
-  border: 3px solid #444; /* Lighter border */
+  border: 3px solid #444; /* border */
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   margin: 10px auto;
   display: block;
@@ -66,29 +66,28 @@ img {
 }
 /* LINK GLOW EFFECT */
 tw-link {
-  /* ... your existing link styles ... */
-  transition: text-shadow 0.3s ease; /* Add a smooth transition */
+  transition: text-shadow 0.3s ease; /* smooth transition */
 }
 
 tw-link:hover {
-  text-shadow: 0 0 10px #800000, 0 0 20px #800000; /* Red glow on hover */
- color: #e0d5d5; /* Slightly lighter gray on hover */
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to apply hover glow effects
+  text-shadow: 0 0 10px #800000, 0 0 20px #800000; /* Red glow hover */
+ color: #e0d5d5; /* lighter gray on hover */
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// apply hover glow effects
 function applyHoverGlows() {
   const links = document.querySelectorAll('tw-link');
 
   links.forEach(link => {
     link.addEventListener('mouseover', () => {
-      // You can add a class for the glow effect here if needed
+     
     });
 
     link.addEventListener('mouseout', () => {
-      // And remove the class here
+      
     });
   });
 }
 
-// Call the function after each passage transition
+
 $(document).on('passageend', applyHoverGlows);</script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="425,25" size="100,100">THE HAUNTING OF ALDRIDGE MANOR
 
 [[Start game]]
