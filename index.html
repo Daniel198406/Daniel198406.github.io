@@ -11,69 +11,110 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 1The Haunting of Aldridge Manor.</tw-noscript></noscript></tw-story>
 <tw-storydata name="1The Haunting of Aldridge Manor" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="32B5502B-48D5-4D68-8A38-3544D1491F34" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* GENERAL STYLING */
 body {
-  background-color: #222;
-  color: #eee; /* Slightly lighter text color */
-  font-family: 'Crimson Text', serif; /* If this font isn't working, try a different serif font */
-  line-height: 1.6; /* A bit more line spacing */
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  font-family: 'Crimson Text', 'Garamond', serif;
+  line-height: 1.6;
   text-align: justify;
 }
 
 /* LINKS */
-tw-link { 
-  color: #444; /* Dark gray */
-  /* ... your other link styles ... */
+tw-link {
+  color: #c0c0c0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 2px 5px;
+  border-radius: 3px;
 }
-
 
 tw-link:hover {
-  text-shadow: 
-    0 0 10px rgba(230, 18, 18, 1), /* Inner glow - increase spread (10px) */
-    0 0 30px rgba(230, 18, 18), /* Medium glow - increase spread (30px) */
-    0 0 50px rgba(230, 18, 18); /* Outer glow - increase spread (50px) */
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
 }
-/* PASSAGES (Story Text Containers) */
+
+/* PASSAGES */
 tw-story {
+  background-image: url('gothic-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-size: 900px auto;
+  background-attachment: fixed;
 }
 
 tw-passage {
-  background-color: rgba(25, 25, 25, 0.85); /* Slightly more opaque background */
-  border: 3px solid #444; /* Lighter border */
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  text-align: center; 
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 2px solid #4a0000;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 /* HEADINGS */
 h1, h2, h3 {
-  font-family: 'Lora', serif; /* Try a different serif font if needed */
-  color: #eee; /* Match text color */
+  font-family: 'Cinzel', 'Trajan Pro', serif;
+  color: #ff4d4d;
   text-shadow: 2px 2px 3px #000;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 /* IMAGES */
 img {
-  border: 3px solid #444; /* Lighter border */
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  margin: 10px auto;
+  border: 3px solid #4a0000;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.7);
+  margin: 15px auto;
   display: block;
   max-width: 100%;
 }
-/* LINK GLOW EFFECT */
-tw-link {
-  /* ... your existing link styles ... */
-  transition: text-shadow 0.3s ease; /* Add a smooth transition */
+
+/* CUSTOM ELEMENTS */
+.vampire-quote {
+  font-style: italic;
+  color: #ff4d4d;
+  border-left: 3px solid #4a0000;
+  padding-left: 15px;
+  margin: 20px 0;
 }
 
-tw-link:hover {
-  text-shadow: 0 0 10px #800000, 0 0 20px #800000; /* Red glow on hover */
- color: #e0d5d5; /* Slightly lighter gray on hover */
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to apply hover glow effects
+.blood-text {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+@keyframes pulse-white-red {
+  0%, 100% { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
+  50% { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+}
+
+.pulsing-text {
+  animation: pulse-white-red 2s infinite;
+}
+
+/* CHOICES */
+.choice-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.choice-container tw-link {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  color: #ff4d4d;
+  border: 1px solid #4a0000;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.choice-container tw-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+  border-color: #ff0000;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to apply hover glow effects
 function applyHoverGlows() {
   const links = document.querySelectorAll('tw-link');
 
@@ -89,15 +130,15 @@ function applyHoverGlows() {
 }
 
 // Call the function after each passage transition
-$(document).on('passageend', applyHoverGlows);</script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="425,25" size="100,100">THE HAUNTING OF ALRIDGE MANOR
+$(document).on('passageend', applyHoverGlows);</script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="400,0" size="100,100">THE HAUNTING OF ALRIDGE MANOR
 
 [[Start game]]
 [[Load game]]
 [[Options]]
 [[Credits]]
-[[Quit game]]</tw-passagedata><tw-passagedata pid="2" name="Start game" tags="" position="400,200" size="100,100">The coppery tang of (text-colour:red)[blood]  filled your mouth. Your vision swam as you stumbled through the darkened hallway, the musty air thick with the scent of decay and something else... something ancient and predatory. You had walked into a (text-colour:red)[nightmare], and the worst part was, you weren&#39;t sure you were going to make it out.
+[[Quit game]]</tw-passagedata><tw-passagedata pid="2" name="Start game" tags="" position="400,175" size="100,100">The coppery tang of (text-colour:red)[blood]  filled your mouth. Your vision swam as you stumbled through the darkened hallway, the musty air thick with the scent of decay and something else... something ancient and predatory. You had walked into a (text-colour:red)[nightmare], and the worst part was, you weren&#39;t sure you were going to make it out.
 
-[[CONTINUE|Chapter 1/EP1]]</tw-passagedata><tw-passagedata pid="3" name="Load game" tags="" position="525,200" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Options" tags="" position="225,200" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Credits" tags="" position="550,25" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Quit game" tags="" position="650,200" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Chapter 1/EP1" tags="" position="400,325" size="100,100">//Chapter I 
+[[CONTINUE|Chapter 1/EP1]]</tw-passagedata><tw-passagedata pid="3" name="Load game" tags="" position="525,175" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Options" tags="" position="275,175" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Credits" tags="" position="550,25" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Quit game" tags="" position="675,175" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Chapter 1/EP1" tags="" position="400,300" size="100,100">//Chapter I 
 Episode I
 THE SUMMONING//
 
@@ -106,7 +147,7 @@ THE SUMMONING//
 The incessant ringing of the phone grated on your nerves. It was well past midnight, the kind of night that sent shivers down even your spine, and you weren&#39;t easily spooked. You considered ignoring it, letting it go to voicemail like the countless others tonight. But something, perhaps a sixth sense honed by years of dealing with the city&#39;s underbelly, told you this call was different.
 
 [[Pick up the phone]]
-[[Forget about it]]</tw-passagedata><tw-passagedata pid="8" name="code" tags="" position="0,100" size="100,100">const links = document.querySelectorAll(&#39;tw-link&#39;);
+[[Forget about it]]</tw-passagedata><tw-passagedata pid="8" name="code" tags="" position="25,200" size="100,100">const links = document.querySelectorAll(&#39;tw-link&#39;);
 const glowEffects = [&#39;glow-effect-1&#39;, &#39;glow-effect-2&#39;, &#39;glow-effect-3&#39;];
 
 function applyRandomGlow(link) {
@@ -129,13 +170,13 @@ The one they call... the Wolf?]
 [[What do you want?]]
 [[Who&#39;s asking?]]</tw-passagedata><tw-passagedata pid="10" name="Forget about it" tags="" position="525,450" size="100,100">&lt;==
 You try to not mind the phone.
-Unfortunatly it keeps on calling for what seems an (text-colour:red)[eternity].
-Finally angered by the continuous call you decide to not (text-colour:red)[smash] the phone And instead answer it.
+Unfortunatly it keeps on calling for what seems an &lt;span class=&quot;pulsing-text&quot;&gt;eternity.&lt;/span&gt;
+Finally angered by the continuous call you decide to not &lt;span class=&quot;pulsing-text&quot;&gt;smash &lt;/span&gt; the phone And instead answer it.
 &quot;Can I help you?&#39;&#39; 
 You say in a fatigued growling.
 A beat of silence, then a voice, thin and reedy, like dry leaves skittering across pavement, whispered on the other end. 
-&quot;Is this... the investigator?
-The one they call... the Wolf?&quot;
+&lt;span class=&quot;vampire-quote&quot;&gt;[Is this Varg the investigator?
+The one they call... &lt;span class=&quot;pulsing-text&quot;&gt;the Wolf?] &lt;/span&gt;&lt;/span&gt;
 [[The Wolf?]]
 [[What do you want?]]
 [[Who&#39;s asking?]]
@@ -148,20 +189,38 @@ The voice trailed off, as if waiting for you to fill in the blank.
 The client continues, their tone a mix of amusement and veiled threat. They know more than they&#39;re letting on, but the reward is too tempting to ignore. They offer a name: Alridge Manor. A place whispered to be not just haunted, but a breeding ground for something far worse.
  They dangle a carrot: information about the investigator&#39;s past, a chance to understand the curse they carry.
  The call ends with an address, a time, and a warning:
-(text-colour:#f03e3e) [Don&#39;t be late. And Mr Zarg? Be careful who you trust.
- Especially yourself.]</tw-passagedata><tw-passagedata pid="12" name="Who&#39;s asking?" tags="" position="400,575" size="100,100">(text-colour:#1c7ed6) [Who&#39;s asking?]
+(text-colour:#f03e3e) [Don&#39;t be late. And Mr Varg? Be careful who you trust.
+ Especially yourself.]
+
+[[Indulge the Hunt]]
+[[Be professional]]v</tw-passagedata><tw-passagedata pid="12" name="Who&#39;s asking?" tags="" position="425,575" size="100,100">(text-colour:#1c7ed6) [Who&#39;s asking?]
 A long, drawn-out sigh, heavy with resignation, came from the other end.
 (text-colour:#f03e3e) [A desperate woman, Mr Varg.] Again, the pause, the subtle pressure.
  A woman who has lost everything to the shadows that cling to that accursed place.
 The client speaks of a family legacy, a darkness that has haunted her bloodline for generations. She mentions Alridge Manor, her voice cracking with a mixture of fear and defiance. She&#39;s willing to pay handsomely, but more importantly, she offers something else: a chance to fight back against the very forces that torment the investigator. She ends the call with an address, a time, and a plea:
-(text-colour:#f03e3e) [Please, Mr Varg You&#39;re my last hope.]</tw-passagedata><tw-passagedata pid="13" name="What do you want?" tags="" position="525,575" size="100,100">(text-colour:#1c7ed6)[What do you want?]
+(text-colour:#f03e3e) [Please, Mr Varg You&#39;re my last hope.]
+[[Indulge the Hunt]]
+[[Be professional]]</tw-passagedata><tw-passagedata pid="13" name="What do you want?" tags="" position="550,575" size="100,100">(text-colour:#1c7ed6)[What do you want?]
 A moment of stunned silence, then a gasp, as if the voice on the other end had been holding its breath.
  (text-colour:#f03e3e)[Forgive me, she whispered, her tone suddenly small and afraid.
  I... I was told you could help.
  That you weren&#39;t afraid of the darkness.]
 
 The client, clearly shaken but resolute, regains her composure. She speaks of a family heirloom, stolen from Alridge Manor, a place where the veil between worlds is thin. She fears it&#39;s fallen into the wrong hands, hands that could unleash something terrible upon the world. She offers a hefty sum, but more importantly, she promises something more: a challenge worthy of the &quot;Wolf,&quot; a chance to embrace the beast within and face a true predator. The call ends with an address, a time, and a whispered warning:
-(text-colour:#f03e3e) [Control your hunger, Mr Varg Some things are best left undisturbed.]</tw-passagedata></tw-storydata>
+(text-colour:#f03e3e) [Control your hunger, Mr Varg Some things are best left undisturbed.]
+[[Indulge the Hunt]]
+[[Fight the Beast]]</tw-passagedata><tw-passagedata pid="14" name="Indulge the Hunt" tags="" position="425,750" size="100,100">&lt;==
+You tossed the receiver onto the desk, not bothering to hang up. The scent, faint but unmistakable, clung to the air - a musky blend of fear and old magic. It was intoxicating, but it wasn&#39;t the scent of the manor that had you captivated. It was hers. Who was this woman, and how did she know so much about you, about... (text-colour:red)[//The Wolf?//]
+
+</tw-passagedata><tw-passagedata pid="15" name="Be professional" tags="" position="250,750" size="100,100"></tw-passagedata><tw-passagedata pid="16" name="Fight the Beast" tags="" position="575,750" size="100,100"></tw-passagedata><tw-passagedata pid="17" name="Chapter 1/EP2" tags="" position="975,25" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)
+[//Chapter I
+Episode  II  
+THE BECKONING??? //] 
+            ^^^^^^^^
+
+//CHANGE LATER//
+&lt;==
+[[Continue]]</tw-passagedata><tw-passagedata pid="18" name="Continue" tags="" position="1025,225" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
